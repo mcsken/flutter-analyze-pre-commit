@@ -1,4 +1,8 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 
 flutter analyze $@
 
+if [ $? -ne 0 ]; then
+    echo 'Run `dart fix --apply` to automatically fix all the issues.'
+    exit 1
+fi

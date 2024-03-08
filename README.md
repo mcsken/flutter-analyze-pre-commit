@@ -4,11 +4,14 @@
 
 Add the following in your `.pre-commit-config.yaml`:
 ```yaml
-- repo: https://github.com/dluksza/flutter-analyze-pre-commit
-  rev: "master"
-  hooks:
-    - id: flutter-analyze
-      args: [lib/*]
+  - repo: https://github.com/mcsken/flutter-analyze-pre-commit
+    rev: v0.1
+    hooks:
+      - id: dart-format
+        args: [--line-length=120] # Extends the dart code length to 120 from the default of 80.
+      - id: flutter-analyze
+        args: [your_app/lib/*]
+
 ```
 
 ## Acknowledgements
