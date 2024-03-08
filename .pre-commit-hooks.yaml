@@ -1,10 +1,15 @@
 -   id: flutter-analyze
     name: Flutter Code Analyze
-    entry: run
+    entry: run_flutter_analyze
     language: script
     files: \.dart$
 -   id: dart-format
-    name: Dart Code format
-    entry: rundartformat
+    name: Dart Code Format
+    entry: run_dart_format
+    language: script
+    files: \.dart$
+-   id: dart-fix
+    name: Dart Code Fix
+    entry: run_dart_fix
     language: script
     files: \.dart$
